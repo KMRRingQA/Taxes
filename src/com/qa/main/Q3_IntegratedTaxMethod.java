@@ -1,26 +1,22 @@
 package com.qa.main;
 
 public class Q3_IntegratedTaxMethod {
-	int taxBracketClassification(double Salary) {
-		if (Salary < 14999) {
+	double applyTaxToSalary(double salary, double taxbracket) {
+		double result = taxbracket * salary / 100;
+		return result;
+	}
+
+	int taxBracketClassification(double salary) {
+		if (salary < 14999) {
 			return 0;
-		}
-		else if (Salary < 19999) {
+		} else if (salary < 19999) {
 			return 10;
-		}
-		else if (Salary < 29999) {
+		} else if (salary < 29999) {
 			return 15;
-		}
-		else if (Salary < 44999) {
+		} else if (salary < 44999) {
 			return 20;
-		}
-		else {
+		} else {
 			return 25;
 		}
-	}
-	
-	double applyTaxToSalary(double Salary, double Taxbracket) {
-		double Result = Taxbracket * Salary / 100;
-		return Result;
 	}
 }
